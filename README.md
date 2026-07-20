@@ -69,3 +69,13 @@ In the project directory, you can run:
 - **`npm run build`**: Compiles and optimizes the TypeScript code into production-ready static assets in the `dist` folder.
 - **`npm run preview`**: Locally previews the production build created by the build command.
 - **`npm run lint`**: Runs ESLint checks to ensure code quality and formatting match best standards.
+
+## 🏗️ Architecture & Design Patterns
+
+This project follows modern React development standards, emphasizing separation of concerns and high-performance rendering:
+
+- **Component-Driven Architecture**: Structured into modular, reusable presentation components (such as `RecipeCard` and `FilterPanel`), keeping code maintainable and isolated.
+- **Unidirectional Data Flow**: Application state flow moves strictly downwards from the parent container component down to the visual child nodes through explicit React properties.
+- **Container-Presenter Pattern**: Container layers manage state orchestration (search values, calorie thresholds, page indexing) while child views focus purely on styling layout logic.
+- **Derived State Optimization**: Eliminates redundant synchronizing `useEffect` blocks. Performance-intensive calculations (such as dynamic array filtering and pagination segmentation) are processed directly during the render block using `useMemo` to completely block cascading re-render loops.
+- **Strict Typing Integration**: Leverages comprehensive TypeScript type definitions and interfaces to secure type safety across recipe payloads, difficulty enumerations, and MUI property parameters.
