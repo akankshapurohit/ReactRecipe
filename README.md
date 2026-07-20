@@ -70,6 +70,8 @@ In the project directory, you can run:
 - **`npm run preview`**: Locally previews the production build created by the build command.
 - **`npm run lint`**: Runs ESLint checks to ensure code quality and formatting match best standards.
 
+---
+
 ## 🏗️ Architecture & Design Patterns
 
 This project follows modern React development standards, emphasizing separation of concerns and high-performance rendering:
